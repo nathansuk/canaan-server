@@ -1,0 +1,18 @@
+{
+  "name": "canaan-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev-server": "tsc-watch --noClear -p ./tsconfig.json --onSuccess \"node ./src/app.js\""
+  },
+  "author": "Nathan SUK",
+  "license": "ISC",
+  "devDependencies": {
+    "tsc-watch": "^6.0.4"
+  },
+  "dependencies": {
+    "ws": "^8.13.0"
+  }
+}

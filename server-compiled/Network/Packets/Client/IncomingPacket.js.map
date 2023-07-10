@@ -1,0 +1,1 @@
+{"version":3,"file":"IncomingPacket.js","sourceRoot":"","sources":["../../../../src/Network/Packets/Client/IncomingPacket.ts"],"names":[],"mappings":";;AAEA,MAAqB,cAAc;IAK/B,YAAY,QAAwB;QAEhC,IAAI,CAAC,SAAS,GAAG,QAAQ,CAAA;IAC7B,CAAC;IAEM,WAAW;QAEd,OAAO,IAAI,CAAC,SAAS,CAAC;IAC1B,CAAC;IAEM,OAAO;QACV,IAAI,CAAC,SAAS,CAAC,OAAO,EAAE,CAAA;IAC5B,CAAC;CAKJ;AAtBD,iCAsBC"}

@@ -1,0 +1,1 @@
+{"version":3,"file":"PongMessage.js","sourceRoot":"","sources":["../../../../src/Network/Packets/Server/PongMessage.ts"],"names":[],"mappings":";;AAAA,4CAAoC;AACpC,qDAA6C;AAE7C,MAAqB,WAAY,SAAQ,wBAAc;IAG5C,IAAI;QACP,OAAO,CAAC,GAAG,CAAC,eAAe,CAAC,CAAA;QAC5B,gBAAM,CAAC,aAAa,CAAC,IAAI,CAAC,CAAC,CAAC,CAAA;IAChC,CAAC;CAEJ;AARD,8BAQC"}

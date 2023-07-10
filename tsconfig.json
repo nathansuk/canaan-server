@@ -1,0 +1,10 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "commonjs",
+    "outDir": "server-compiled/",
+    "sourceMap": true
+  },
+  "include": ["src/**/*"],
+}

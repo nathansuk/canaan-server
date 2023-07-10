@@ -1,0 +1,1 @@
+{"version":3,"file":"PingMessage.js","sourceRoot":"","sources":["../../../../src/Network/Packets/Client/PingMessage.ts"],"names":[],"mappings":";;AAEA,qDAA8C;AAE9C,MAAqB,WAAY,SAAQ,wBAAc;IAGnD,YAAY,QAAwB;QAChC,KAAK,CAAC,QAAQ,CAAC,CAAA;IACnB,CAAC;CAGJ;AARD,8BAQC"}
