@@ -2,6 +2,7 @@ import { ClientPacket } from "./Client/ClientPacketEnum"
 import IncomingPacket from "./Client/IncomingPacket"
 import PingMessage from "./Client/PingMessage"
 import PongMessage from "./Server/PongMessage"
+import UserConnection from "./Client/UserConnection"
 
 export default class PacketManager
 {
@@ -15,17 +16,19 @@ export default class PacketManager
 
     public registerPacket(): void
     {
-        this._packetList.set(ClientPacket.PING_MESSAGE, new PingMessage(new PongMessage))
+        this._packetList.set(ClientPacket.PING_MESSAGE, new PingMessage)
+        this._packetList.set(ClientPacket.NEW_USER_CONNECTION, new UserConnection)
     }
 
-    public handlePacket(packetId: number): void {
+    public handlePacket(packetData: any): void {
 
-        const packet = packetId as ClientPacket
-        const packetLogic = this._packetList.get(packet)
+        const packetIdentifier = packetData.packetId as ClientPacket
 
-        console.log("[INCOMING PACKET : " + packetId + "]")
+        const packetLogic = this._packetList.get(packetIdentifier)
 
-        packetLogic.trigger()
+        console.log("[INCOMING PACKET : " + packetIdentifier + "]")
+
+        packetLogic.triggerResponse()
 
     } 
 

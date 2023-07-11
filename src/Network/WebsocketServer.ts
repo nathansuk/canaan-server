@@ -1,15 +1,18 @@
 import {WebSocketServer} from 'ws'
 import PacketManager from './Packets/PacketManager'
+import SessionManager from './SessionManager'
 
 export default class WebsocketServer {
 
     private _socket: WebSocketServer
     private _packetManager: PacketManager
     private _players: Map<number, any>
+    private _sessionManager: SessionManager
     
     constructor() {
         this._socket = new WebSocketServer({port: 8080})
         this._packetManager = new PacketManager()
+        this._sessionManager = new SessionManager()
         this._players = new Map<number, any>
         this.listen(this._socket)
     }
@@ -25,7 +28,8 @@ export default class WebsocketServer {
 
             client.on('message', (data: Uint16Array) => {
                 const packet: any = JSON.parse(data.toString())
-                this._packetManager.handlePacket(packet.packetId)
+
+                this._packetManager.handlePacket(packet)
             })
         })
     }

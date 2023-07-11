@@ -2,11 +2,15 @@ import OutgoingPacket from "../Server/OutgoingPacket";
 import PongMessage from "../Server/PongMessage";
 import IncomingPacket from "./IncomingPacket";
 
-export default class PingMessage extends IncomingPacket
+export default class PingMessage implements IncomingPacket
 {
 
-    constructor(response: OutgoingPacket) {
-        super(response)
+    constructor() {
+    }
+
+    public triggerResponse(): void
+    {
+        new PongMessage()
     }
 
 

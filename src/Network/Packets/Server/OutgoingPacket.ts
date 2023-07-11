@@ -1,10 +1,6 @@
-export default class OutgoingPacket
+export default interface OutgoingPacket
 {
 
-    constructor() {}
-
-    public trigger(): void {
-        console.log('Prout')
-    }
+    sendResponse(): void;
 
 }

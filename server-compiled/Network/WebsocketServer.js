@@ -2,10 +2,12 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const ws_1 = require("ws");
 const PacketManager_1 = require("./Packets/PacketManager");
+const SessionManager_1 = require("./SessionManager");
 class WebsocketServer {
     constructor() {
         this._socket = new ws_1.WebSocketServer({ port: 8080 });
         this._packetManager = new PacketManager_1.default();
+        this._sessionManager = new SessionManager_1.default();
         this._players = new Map;
         this.listen(this._socket);
     }
@@ -16,7 +18,7 @@ class WebsocketServer {
             this._players.set(1, client);
             client.on('message', (data) => {
                 const packet = JSON.parse(data.toString());
-                this._packetManager.handlePacket(packet.packetId);
+                this._packetManager.handlePacket(packet);
             });
         });
     }

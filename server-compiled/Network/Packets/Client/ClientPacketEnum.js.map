@@ -1,1 +1,1 @@
-{"version":3,"file":"ClientPacketEnum.js","sourceRoot":"","sources":["../../../../src/Network/Packets/Client/ClientPacketEnum.ts"],"names":[],"mappings":";;;AAAA,IAAY,YAGX;AAHD,WAAY,YAAY;IAEpB,+DAAgB,CAAA;AACpB,CAAC,EAHW,YAAY,4BAAZ,YAAY,QAGvB"}
+{"version":3,"file":"ClientPacketEnum.js","sourceRoot":"","sources":["../../../../src/Network/Packets/Client/ClientPacketEnum.ts"],"names":[],"mappings":";;;AAAA,IAAY,YAIX;AAJD,WAAY,YAAY;IAEpB,+DAAgB,CAAA;IAChB,6EAAuB,CAAA;AAC3B,CAAC,EAJW,YAAY,4BAAZ,YAAY,QAIvB"}

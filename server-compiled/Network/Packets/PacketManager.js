@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const ClientPacketEnum_1 = require("./Client/ClientPacketEnum");
 const PingMessage_1 = require("./Client/PingMessage");
-const PongMessage_1 = require("./Server/PongMessage");
+const UserConnection_1 = require("./Client/UserConnection");
 class PacketManager {
     constructor() {
         this._packetList = new Map;
@@ -10,13 +10,14 @@ class PacketManager {
         this.registerPacket();
     }
     registerPacket() {
-        this._packetList.set(ClientPacketEnum_1.ClientPacket.PING_MESSAGE, new PingMessage_1.default(new PongMessage_1.default));
+        this._packetList.set(ClientPacketEnum_1.ClientPacket.PING_MESSAGE, new PingMessage_1.default);
+        this._packetList.set(ClientPacketEnum_1.ClientPacket.NEW_USER_CONNECTION, new UserConnection_1.default);
     }
-    handlePacket(packetId) {
-        const packet = packetId;
-        const packetLogic = this._packetList.get(packet);
-        console.log("[INCOMING PACKET : " + packetId + "]");
-        packetLogic.trigger();
+    handlePacket(packetData) {
+        const packetIdentifier = packetData.packetId;
+        const packetLogic = this._packetList.get(packetIdentifier);
+        console.log("[INCOMING PACKET : " + packetIdentifier + "]");
+        packetLogic.triggerResponse();
     }
 }
 exports.default = PacketManager;
