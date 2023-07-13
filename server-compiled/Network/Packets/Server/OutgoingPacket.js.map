@@ -1,1 +1,1 @@
-{"version":3,"file":"OutgoingPacket.js","sourceRoot":"","sources":["../../../../src/Network/Packets/Server/OutgoingPacket.ts"],"names":[],"mappings":";;AAAA,MAAqB,cAAc;IAG/B,gBAAe,CAAC;IAET,OAAO;QACV,OAAO,CAAC,GAAG,CAAC,OAAO,CAAC,CAAA;IACxB,CAAC;CAEJ;AATD,iCASC"}
+{"version":3,"file":"OutgoingPacket.js","sourceRoot":"","sources":["../../../../src/Network/Packets/Server/OutgoingPacket.ts"],"names":[],"mappings":""}

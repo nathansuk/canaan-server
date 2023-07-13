@@ -7,8 +7,12 @@ class SessionManager {
     getSessions() {
         return this._sessions;
     }
-    addSessions(sessionId, playerId) {
+    addSessions(playerId, sessionId) {
         this._sessions.set(playerId, sessionId);
+    }
+    sendPacket(playerId, packet) {
+        const playerSession = this._sessions.get(playerId);
+        playerSession.send(packet);
     }
 }
 exports.default = SessionManager;

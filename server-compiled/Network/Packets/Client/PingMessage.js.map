@@ -1,1 +1,1 @@
-{"version":3,"file":"PingMessage.js","sourceRoot":"","sources":["../../../../src/Network/Packets/Client/PingMessage.ts"],"names":[],"mappings":";;AACA,uDAAgD;AAGhD,MAAqB,WAAW;IAG5B;IACA,CAAC;IAEM,eAAe;QAElB,IAAI,qBAAW,EAAE,CAAA;IACrB,CAAC;CAGJ;AAZD,8BAYC"}
+{"version":3,"file":"PingMessage.js","sourceRoot":"","sources":["../../../../src/Network/Packets/Client/PingMessage.ts"],"names":[],"mappings":";;AACA,uDAAgD;AAIhD,MAAqB,WAAW;IAG5B,gBAAe,CAAC;IAET,eAAe;QAElB,IAAI,qBAAW,EAAE,CAAC,YAAY,EAAE,CAAA;IACpC,CAAC;IAEM,OAAO,KAAU,CAAC;CAG5B;AAbD,8BAaC"}

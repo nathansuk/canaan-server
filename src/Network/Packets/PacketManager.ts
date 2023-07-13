@@ -23,8 +23,12 @@ export default class PacketManager
     public handlePacket(packetData: any): void {
 
         const packetIdentifier = packetData.packetId as ClientPacket
-
         const packetLogic = this._packetList.get(packetIdentifier)
+        
+        if(packetData.data)
+        {
+            packetLogic.setData(packetData.data)
+        }
 
         console.log("[INCOMING PACKET : " + packetIdentifier + "]")
 

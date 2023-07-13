@@ -1,1 +1,1 @@
-{"version":3,"file":"ServerPacketEnum.js","sourceRoot":"","sources":["../../../../src/Network/Packets/Server/ServerPacketEnum.ts"],"names":[],"mappings":";;;AAAA,IAAY,YAGX;AAHD,WAAY,YAAY;IAEpB,iEAAiB,CAAA;AACrB,CAAC,EAHW,YAAY,4BAAZ,YAAY,QAGvB"}
+{"version":3,"file":"ServerPacketEnum.js","sourceRoot":"","sources":["../../../../src/Network/Packets/Server/ServerPacketEnum.ts"],"names":[],"mappings":";;;AAAA,IAAY,YAIX;AAJD,WAAY,YAAY;IAEpB,iEAAiB,CAAA;IACjB,mEAAkB,CAAA;AACtB,CAAC,EAJW,YAAY,4BAAZ,YAAY,QAIvB"}

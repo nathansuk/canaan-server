@@ -1,3 +1,5 @@
+import OutgoingPacket from "./Packets/Server/OutgoingPacket"
+
 export default class SessionManager
 {
 
@@ -13,9 +15,15 @@ export default class SessionManager
         return this._sessions
     }
 
-    public addSessions(sessionId: any, playerId: number): void
+    public addSessions(playerId: number, sessionId: any): void
     {
         this._sessions.set(playerId, sessionId)
+    }
+
+    public sendPacket(playerId: any, packet: OutgoingPacket)
+    {
+        const playerSession = this._sessions.get(playerId)
+        playerSession.send(packet)
     }
 
 }
