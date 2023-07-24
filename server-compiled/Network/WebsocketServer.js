@@ -11,7 +11,7 @@ class WebsocketServer {
         this.listen(this._socket);
     }
     listen(server) {
-        console.log("Démarrage du serveur socket");
+        console.log("Websocket Server initialized");
         server.on('connection', (client) => {
             console.log('[SOCKET] New client connected');
             this._sessionManager.addSessions(1, client);

@@ -17,13 +17,13 @@ export default class WebsocketServer {
 
     listen(server): void {
 
-        console.log("Démarrage du serveur socket")
+        console.log("Websocket Server initialized")
 
         server.on('connection', (client) => {
 
             console.log('[SOCKET] New client connected')
 
-            this._sessionManager.addSessions(1, client)
+            this._sessionManager.addSessions(1, client) // Todo map a Player object with session id
 
             client.on('message', (data: Uint16Array) => {
                 const packet: any = JSON.parse(data.toString())

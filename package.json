@@ -13,6 +13,8 @@
     "tsc-watch": "^6.0.4"
   },
   "dependencies": {
+    "mysql": "^2.18.1",
+    "typeorm": "^0.3.17",
     "ws": "^8.13.0"
   }
 }
