@@ -10,5 +10,15 @@ export default class Player
         this._username = username
     }
 
+    public getId(): number
+    {
+        return this._id
+    }
+
+    public getUsername(): string
+    {
+        return this._username
+    }
+
 
 }

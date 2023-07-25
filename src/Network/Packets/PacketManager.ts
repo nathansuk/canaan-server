@@ -3,6 +3,7 @@ import IncomingPacket from "./Client/IncomingPacket"
 import PingMessage from "./Client/PingMessage"
 import PongMessage from "./Server/PongMessage"
 import UserConnection from "./Client/UserConnection"
+import Session from "../Session"
 
 export default class PacketManager
 {
@@ -20,7 +21,7 @@ export default class PacketManager
         this._packetList.set(ClientPacket.NEW_USER_CONNECTION, new UserConnection)
     }
 
-    public handlePacket(packetData: any): void {
+    public handlePacket(session: Session, packetData: any): void {
 
         const packetIdentifier = packetData.packetId as ClientPacket
         const packetLogic = this._packetList.get(packetIdentifier)
@@ -32,7 +33,7 @@ export default class PacketManager
 
         console.log("[INCOMING PACKET : " + packetIdentifier + "]")
 
-        packetLogic.triggerResponse()
+        packetLogic.triggerResponse(session)
 
     } 
 

@@ -4,7 +4,9 @@
     "target": "es2020",
     "module": "commonjs",
     "outDir": "server-compiled/",
-    "sourceMap": true
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "app.ts"],
 }

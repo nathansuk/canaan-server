@@ -1,6 +1,8 @@
+import Session from "../../Session";
+
 export default interface OutgoingPacket
 {
 
-    sendResponse(): void;
+    sendResponse(session: Session): void;
 
 }

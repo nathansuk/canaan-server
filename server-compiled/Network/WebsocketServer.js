@@ -14,7 +14,7 @@ class WebsocketServer {
         console.log("Websocket Server initialized");
         server.on('connection', (client) => {
             console.log('[SOCKET] New client connected');
-            this._sessionManager.addSessions(1, client);
+            this._sessionManager.addSessions(1, client); // Todo map a Player object with session id
             client.on('message', (data) => {
                 const packet = JSON.parse(data.toString());
                 this._packetManager.handlePacket(packet);

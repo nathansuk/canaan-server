@@ -1,29 +1,32 @@
 import OutgoingPacket from "./Packets/Server/OutgoingPacket"
+import Player from "../Players/Player"
+import Session from "./Session"
 
 export default class SessionManager
 {
 
-    private _sessions: Map<number, any>
+    public static _sessions: Map<string, Session> // jwt token as session id / Player
+    private static lastId: number = 1 // temp
 
     constructor()
     {
-        this._sessions = new Map<number, any>()
+        SessionManager._sessions = new Map<string, Session>()
     }
     
-    public getSessions(): Map<number, any>
+    public getSessions(): Map<string, Session>
     {
-        return this._sessions
+        return SessionManager._sessions
     }
 
-    public addSessions(playerId: number, sessionId: any): void
+    public addSessions(session: Session): void
     {
-        this._sessions.set(playerId, sessionId)
-    }
+        const sessionId = 'session' + SessionManager.lastId // temp
 
-    public sendPacket(playerId: any, packet: OutgoingPacket)
-    {
-        const playerSession = this._sessions.get(playerId)
-        playerSession.send(packet)
+        SessionManager._sessions.set(sessionId, session)
+        
+        SessionManager.lastId++ // temp
+
+        console.log(SessionManager._sessions.size)
     }
 
 }

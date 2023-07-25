@@ -1,4 +1,5 @@
 import { DataSource } from "typeorm";
+import { Player } from "./Entities/Player";
 
 export default class DatabaseManager
 {
@@ -18,16 +19,18 @@ export default class DatabaseManager
             port: 3306,
             username: 'root',
             password: '',
-            database: 'canaan'
+            database: 'canaan',
+            entities: [Player]
         })
 
         this._dataSource.initialize()
         .then(() => {
-            console.log("DatabaseManager initialized")
+            console.log("DatabaseManager -> Initialized")
         })
         .catch((error) => {
             console.log("Error during database initialization : ", error)
         })
+
     }
 
 
